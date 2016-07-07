@@ -1,0 +1,10 @@
+<h1> My Tasks </h1>
+
+<% @tasks.each do |task| %>
+  <div>
+    <h2><%= link_to task.title, task_path(task) %></h2>
+    <p><%= task.description %> </p>
+    <p><%= task.due_date %> </p>
+    <hr>
+  </div>
+<% end %>
